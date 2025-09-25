@@ -1,14 +1,14 @@
-const listemots = ["cachalot","pétunia","serviette"]
-const listephrases = ["Pas de panique !", "Je vais bien.", "Merci pour ce test."]
+const listemots = ["Bravo","Magnifique","Exceptionnel"]
+const listephrases = ["Anne-Laure fait du bon travail !", "J'adore ce code.", "Merci pour ce test !"]
 let score = 0
 choix=false
 
 while (choix===false){
-    choixuser = prompt("indiquez si vous souhaitez une liste de mot ou de phrases. tapez 1 pour la liste de mots ; tapez 2 pour la liste de phrases.")
+    choixuser = prompt("Indiquez si vous souhaitez une liste de mot ou de phrases. Tapez 1 pour la liste de mots ; tapez 2 pour la liste de phrases.")
     switch (choixuser) {
         case ("1") :
             for (let compteur =0 ; compteur<3 ; compteur++) {
-                let motutilisateur = prompt("saisissez le mot "+ listemots[compteur])
+                let motutilisateur = prompt("Saisissez le mot suivant : "+ listemots[compteur])
                 if(motutilisateur===listemots[compteur]) {
                 score+=1 }
             }
@@ -16,7 +16,7 @@ while (choix===false){
             break
         case ("2") :
             for (let compteur =0 ; compteur<3 ; compteur++) {
-                let motutilisateur = prompt("saisissez le mot "+ listephrases[compteur])
+                let motutilisateur = prompt("Saisissez la phrase suivante : "+ listephrases[compteur])
                 if(motutilisateur===listephrases[compteur]) {
                 score+=1 }
             }
@@ -26,5 +26,4 @@ while (choix===false){
             choix=false  
     }
 }
-
-console.log("Le jeu est fini. Votre score :" + score)
+console.log("Le jeu est fini. Merci pour votre participation.Votre score est :" + score)
